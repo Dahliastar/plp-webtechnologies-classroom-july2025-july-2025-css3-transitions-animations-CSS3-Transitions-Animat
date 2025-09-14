@@ -1,0 +1,99 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.circle:hover {
+    background-color: red;
+    border-radius: 0%;
+    transition: all 2s ease-in-out;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+/*Button hover effects*/
+.btn:hover {
+    background-color: rgb(0, 70, 100);
+    transition: 3s all ease-in-out;
+}
+/*Animations*/
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 10px solid lightgray;
+    border-top: 10px solid blue;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*Combining Transitions and Animations*/
+.box {
+    width: 100px;
+    height: 100px;
+    background-color:blueviolet;
+    transition: transform 1s ease-in-out;
+}
+
+.box:hover {
+    animation: color-change 1s ease infinite;
+    transform: rotate(30deg);
+}
+
+@keyframes color-change {
+    0%, 100% { background-color: rgb(35, 122, 148); }
+    50% { background-color: orange; }
+}
+
+#animate {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+/*Card Flip*/
+.card {
+    width: 200px;
+    height: 300px;
+    background-color:aquamarine;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+#loader {
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    
+}
+.hidden {
+    display: none;
+}
+
+.loader {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+.loader.active {
+    opacity: 1;
+}
